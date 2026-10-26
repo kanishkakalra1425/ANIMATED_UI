@@ -76,20 +76,47 @@
   });
   // dots-grid
 const dotGrid = document.querySelector("#dotGrid");
-const section = document.querySelector(".section2");
 
-function createDots() {
-    dotGrid.innerHTML = "";
-
-    const columns = Math.ceil(window.innerWidth / 18);
-    const rows = Math.ceil(section.clientHeight / 18);
-
-    for (let i = 0; i < columns * rows; i++) {
-        const dot = document.createElement("div");
-        dot.classList.add("dot");
-        dotGrid.appendChild(dot);
-    }
+for (let i = 0; i < 10000; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    dotGrid.appendChild(dot);
 }
 
-createDots();
-window.addEventListener("resize", createDots);
+dotGrid.addEventListener("mousemove", (e) => {
+    const dots = document.querySelectorAll(".dot");
+
+    dots.forEach((dot) => {
+        const rect = dot.getBoundingClientRect();
+
+        const dotX = rect.left + rect.width / 2;
+        const dotY = rect.top + rect.height / 2;
+
+        const distance = Math.sqrt(
+            (e.clientX - dotX) ** 2 +
+            (e.clientY - dotY) ** 2
+        );
+
+        if (distance < 60) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+    });
+});
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+const split = SplitText.create(".highlight-text", {
+  type: "words"
+});
+
+gsap.to(split.words, {
+  color: "#fff",
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".dot-text",
+    start: "top center",
+    end: "bottom center",
+    scrub: true
+  }
+});

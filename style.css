@@ -11,37 +11,43 @@
 /** dot-bg  **/
 
 .section2 {
-    min-height: 100vh;
+    position: relative;
     width: 100%;
-    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    flex-direction: column; */
 }
+ .dot-text {
+  position: absolute;
+      font-weight: 700;
+ font-weight: 700;
+    font-size: 120px;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 2px;
+
+ }
 .dot-grid {
-    position: fixed;
-    inset: 0;
     display: grid;
-    grid-template-columns: repeat(30, 12px);
-    grid-auto-rows: 6px;
+    grid-template-columns: repeat(auto-fill, 10px);
+    grid-auto-rows: 12px;
     gap: 6px;
     width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 100;
-    overflow: hidden;
+    height: 100vh;
 }
-
 .dot {
-    width: 3px;
-    height: 3px;
+    width: 1.8px;
+    height: 1.8px;
     border-radius: 50%;
-    background: #444;
+    background: #dddddd;
     transition: background 0.2s ease;
 }
 .dot.active {
-  background: #00e5ff;
-  box-shadow: 0 0 8px #00e5ff;
+  background: #b9b9b9;
+
 }
 /** dot-bg end **/
   .notion-div{
