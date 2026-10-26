@@ -76,9 +76,20 @@
   });
   // dots-grid
 const dotGrid = document.querySelector("#dotGrid");
+const section = document.querySelector(".section2");
 
-for (let i = 0; i < 100; i++) {
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  dotGrid.appendChild(dot);
+function createDots() {
+    dotGrid.innerHTML = "";
+
+    const columns = Math.ceil(window.innerWidth / 18);
+    const rows = Math.ceil(section.clientHeight / 18);
+
+    for (let i = 0; i < columns * rows; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        dotGrid.appendChild(dot);
+    }
 }
+
+createDots();
+window.addEventListener("resize", createDots);
