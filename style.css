@@ -325,8 +325,8 @@ body {
   min-height: 100vh;
   overflow: hidden;
   isolation: isolate;
-  background: #101114;
-  color: white;
+  background: white ;
+  color: #101114;
 }
 
 .dot-grid {
@@ -343,18 +343,18 @@ body {
 }
 
 .dot {
-  width: 2px;
-  height: 2px;
+  width: 1.5px;
+  height: 1.5px;
   justify-self: center;
   align-self: center;
   border-radius: 50%;
-  background: #66686d;
+  background: #e8e8e9;
   transition: background-color 0.15s ease;
   pointer-events: none;
 }
 
 .dot.active {
-  background: #fff;
+  background: #878787;
 }
 
 .section-content {

@@ -302,7 +302,7 @@ if (highlightText) {
   });
 
   gsap.to(split.words, {
-    color: "#ffffff",
+    color: "black",
     stagger: 0.12,
     ease: "none",
     scrollTrigger: {
