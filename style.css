@@ -343,18 +343,18 @@ body {
 }
 
 .dot {
-  width: 1.5px;
-  height: 1.5px;
+  width: 1.6px;
+  height: 1.6px;
   justify-self: center;
   align-self: center;
   border-radius: 50%;
-  background: #e8e8e9;
+  background: #acacac;
   transition: background-color 0.15s ease;
   pointer-events: none;
 }
 
 .dot.active {
-  background: #878787;
+  background: #575757;
 }
 
 .section-content {
@@ -376,7 +376,7 @@ body {
   max-width: 1100px;
   margin: 0;
   color: #777980;
-  font-size: clamp(32px, 6vw, 80px);
+  font-size: clamp(32px, 6vw, 100px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -2px;
@@ -390,7 +390,7 @@ body {
   max-width: 650px;
   margin: 0;
   color: #a2a4aa;
-  font-size: clamp(15px, 2vw, 20px);
+  font-size: clamp(15px, 3vw, 30px);
   line-height: 1.6;
 }
 
