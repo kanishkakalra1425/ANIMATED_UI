@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,8 +147,129 @@
 </p>
   <p>Following our goal making the internet a better place </p>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
 
+ -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated UI</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP core and plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-wrapper" id="heroGrid" aria-hidden="true"></div>
+
+    <!-- Floating role labels -->
+    <div class="floating-role ui-designer">
+      <span class="role-icon blue">➤</span>
+      <p class="role-label">UI Designer</p>
+    </div>
+
+    <div class="floating-role ux-designer">
+      <span class="role-icon green">➤</span>
+      <p class="role-label">UX Designer</p>
+    </div>
+
+    <div class="floating-role developer">
+      <span class="role-icon yellow">➤</span>
+      <p class="role-label">Developer</p>
+    </div>
+
+    <div class="floating-role creadeveloper">
+      <span class="role-icon purple">➤</span>
+      <p class="role-label">Creative Developer</p>
+    </div>
+
+    <div class="floating-role E-com">
+      <span class="role-icon orange">➤</span>
+      <p class="role-label">E-commerce Developer</p>
+    </div>
+
+    <!-- Floating images -->
+    <div class="floating-card wireframe">
+      <img src="wireframe.svg" alt="Website wireframe">
+    </div>
+
+    <div class="floating-card right-image-div">
+      <img src="diseno.avif" alt="Website design on a desktop">
+    </div>
+
+    <div class="floating-card left-image-div">
+      <img src="pc-screen.avif" alt="Web development workspace">
+    </div>
+
+    <div class="floating-card left-center-image-div">
+      <img src="chat.svg" alt="Chat interface">
+    </div>
+
+    <div class="floating-card right-center-image-div">
+      <img src="codigo.svg" alt="Code editor">
+    </div>
+
+    <div class="floating-card right-bottom-image-div">
+      <img src="celular-screen.avif" alt="Mobile application">
+    </div>
+
+    <!-- Main heading -->
+    <div class="hero-heading">
+      <h1>internet.</h1>
+    </div>
+
+    <!-- Floating app icons -->
+    <div class="app-icon notion-div">
+      <img src="app-notion.svg" alt="Notion">
+    </div>
+
+    <div class="app-icon notion-div2">
+      <img src="app-notion2.svg" alt="Notion application">
+    </div>
+
+    <div class="app-icon notion-div3">
+      <img src="app-wordpress.webp" alt="WordPress">
+    </div>
+
+    <div class="app-icon notion-div5">
+      <img src="app-figma.webp" alt="Figma">
+    </div>
+
+    <div class="ai-mode">
+      <span>AI Mode</span>
+      <span class="toggle" aria-label="AI mode enabled"></span>
+    </div>
+  </section>
+
+  <!-- DOT GRID SECTION -->
+  <section class="section2" id="about">
+    <div class="dot-grid" id="dotGrid" aria-hidden="true"></div>
+
+    <div class="section-content">
+      <p class="dot-text">
+        <span class="highlight-text">We Create high quality websites</span>
+        for businesses, governments, and organizations.
+      </p>
+
+      <p class="section-subtitle">
+        Following our goal of making the internet a better place.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
